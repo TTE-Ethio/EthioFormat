@@ -15,9 +15,5 @@ EthioFormat is not just a data serialization format; it represents a vision for 
 - Optimize memory usage and reduce parsing time.
 - Maintain flexibility in your data structure without compromising performance.
 
-## Installation
-To use EthioFormat, you can clone this repository to get the source code.
-
-```bash
-git clone https://github.com/yourusername/EthioFormat.git
-cd EthioFormat
+# Contact
+For more information or inquiries, reach out to Tewodros Melaku via email: tewodrostechethiopia@gmail.com
