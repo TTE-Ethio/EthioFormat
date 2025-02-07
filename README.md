@@ -5,7 +5,6 @@ EthioFormat is a new, highly efficient data serialization format designed for hi
 ## Key Features
 - **Text & Binary Versions**: EthioFormat provides both a human-readable text format and a highly optimized binary format for fast data serialization and deserialization.
 - **Parallel Processing**: EthioFormat is designed to enable efficient parallel processing. It allows multiple threads/cores/machines to handle different parts of the data simultaneously, improving speed and scalability.
-- **Compact Structure**: The binary version leverages a specialized 2-bit map system to minimize data overhead and optimize parsing, while the text version uses delimiters to separate fields and content.
 - **Optimized for Large Data**: Whether you are handling game data, training AI models, or processing social media content, EthioFormat is designed to scale efficiently, reducing the need for high computational power.
 
 ## Why EthioFormat?
@@ -190,6 +189,9 @@ Now, let’s integrate the delimiter-based storage model we discussed earlier. W
 In EthioFormat, this key-value pairing follows a **consistent structure** for all records—**with the exception of the first record**, which functions as the **header**. The header is special because it holds the **map** string (made up of 0s, 1s, and 2s) that guides the parsing and construction of the hierarchical data.
 
 The second field in the header is empty for now but will play a crucial role later when we discuss how **parallel access** is handled in the text version.
+
+Now, for the rest of the key-value pairs, they can be used to fill in the node's data. Once the header is parsed to get the tree-building map, that map is used to construct the tree with 1 being used to create a new node and go one level deeper making the current node the new child, 2 being used to add a key-value pair to the current node that we are focusing on, and 0 is used to backtrack changing the node we are focusing on to the parent of the current node. Now, let's see a simple example, on how it works:
+
 
 ---
 
