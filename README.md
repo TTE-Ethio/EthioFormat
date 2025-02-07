@@ -115,7 +115,7 @@ One of the **key advantages** of EthioFormat is its ability to handle **parallel
 
 Next, we’ll talk about the **binary version** of EthioFormat, which is designed to be even **more efficient** than the text version. Unlike the text version that relies on delimiters, the binary version stores data in a compact binary format that eliminates the need for textual parsing, making it much **faster** and **more memory-efficient**.
 
-- **Binary Parsing**: Instead of text delimiters, the binary version relies on **offsets** and **bit-encoded instructions** (like the `1`, `0`, and `2` codes from the header) to describe the data’s structure. This allows the data to be parsed much more efficiently, making it ideal for high-performance applications where speed is critical.
+- **Binary Parsing**: Instead of text delimiters, the binary version relies on **offsets** to describe the tree's individual nodes' key-value pairs. This allows the data to be parsed much more efficiently, making it ideal for high-performance applications where speed is critical.
 
 
 #### **The Text Version of EthioFormat: Using Delimiters**
@@ -166,19 +166,9 @@ Now, let’s walk through how the parser works on this raw data:
 
 You might wonder: What happens if the **data itself** contains the delimiters (`\n` or `\0`)? Wouldn’t the parser mistakenly treat those characters as the end of a field or data?
 
-This is where **encoding** comes into play. When we encode the data, we ensure that any special characters (like `\n` or `\0`) **won’t interfere with the delimiters**. By **escaping** those characters, we prevent the parser from interpreting them as delimiters.
+This is where **encoding** comes into play. When we encode the data, we ensure that any special characters (like `\n` or `\0`) **won’t interfere with the delimiters**. By **encoding** those characters, we prevent the parser from interpreting them as delimiters. For example, if a field value contains a newline or null character, it will be **encoded** to a special form before being placed in the raw data. Once the data is parsed, we can **decode** the field back to its original form, safely including the special characters without confusing the parser.
 
-For example, if a field value contains a newline or null character, it will be **encoded** to a special form before being placed in the raw data. Once the data is parsed, we can **decode** the field back to its original form, safely including the special characters without confusing the parser.
-
-Here are **five examples** of special characters that would typically need to be encoded in EthioFormat’s text version:
-
-1. `\n` (newline)
-2. `\0` (null terminator)
-3. `\t` (tab)
-4. `\r` (carriage return)
-5. `\\` (backslash)
-
-I love how you’re progressing! You’ve made great strides in building up the fundamental concepts and now you’re beginning to tie them all together. Let me break down what you've written so far and give a bit of feedback:
+But for now in the C++ implementation, it is assummed the input doesn't contain any **special characters**.
 
 ---
 
@@ -200,57 +190,6 @@ Now, let’s integrate the delimiter-based storage model we discussed earlier. W
 In EthioFormat, this key-value pairing follows a **consistent structure** for all records—**with the exception of the first record**, which functions as the **header**. The header is special because it holds the **map** string (made up of 0s, 1s, and 2s) that guides the parsing and construction of the hierarchical data.
 
 The second field in the header is empty for now but will play a crucial role later when we discuss how **parallel access** is handled in the text version.
-
----
-
-### **Example Walkthrough: EthioFormat in Action**
-
-Let’s now put this all together with a practical example that showcases how **EthioFormat** works, utilizing all the concepts we’ve discussed so far. We will show how the header, key-value pairs, and delimiters work together to form a **fully functional** data structure.
-
-Consider the following simple hierarchical data:
-
-```
-{
-  "person": {
-    "name": "Menelik",
-    "age": 34,
-    "sex": "M"
-  },
-  "person": {
-    "name": "Ruth",
-    "age": 28,
-    "sex": "F"
-  }
-}
-```
-
-In EthioFormat, this data structure could be serialized as follows (with some simplifications):
-
-#### **Header Record (Map)**:
-
-```
-1\n2\n0\n
-```
-
-Explanation:  
-- `1`: Start of a new level (root node).
-- `2`: New key-value pair (attribute added).
-- `0`: Backtrack to the previous node (parent).
-  
-This **header map** serves as the guide to constructing the hierarchical structure.
-
-#### **Content Records (Key-Value Pairs)**:
-
-```
-Name\nMenelik\nAge\n34\nSex\nM\n
-Name\nRuth\nAge\n28\nSex\nF\n\0
-```
-
-Explanation:
-- Each **key-value pair** is separated by the `\n` delimiter.
-- The **name**, **age**, and **sex** fields are parsed sequentially, each with its respective value.
-
-When the parser starts, it processes the **header** first, and based on the map structure (`1\n2\n0\n`), it knows how to organize the records. The `\n` delimiters guide it through the key-value pairs, and once it encounters the `\0` delimiter, it knows that the data is fully parsed.
 
 ---
 
