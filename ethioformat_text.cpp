@@ -11,7 +11,6 @@ class EthioTreeNode {
 		void AddKeyValuePair(std::string key, std::string value);
 		EthioTreeNode* GetChild(int nth);
 		EthioTreeNode* GetParent();
-		void AddChild(EthioTreeNode* child);
 		int GetNumberOfChildren(){ return this->children.size(); }
 		int GetNumKVPs(){ return numKVPs; }
 		int GetDepth(){ return depth; }
@@ -70,24 +69,21 @@ EthioTreeNode* EthioTreeNode::GetChild(int nth) {
 EthioTreeNode* EthioTreeNode::GetParent() {
     return parent;
 }
-// Adds a child node
-void EthioTreeNode::AddChild(EthioTreeNode* child) {
-    if (child) {
-        children.push_back(child);
-    }
-}
-
 
 class EthioFormat{
 private:
 	std::vector<std::vector<std::string>> ParseRawString(string rawString, int numberOfFields){
 		vector<std::vector<std::string>> table;
-		int mainIndex = 0;
-		for( ; rawString[mainIndex] != '\0' ; ){
+		int loopControl;
+		for(int mainIndex = 0; rawString[mainIndex] != '\0' ; ){
+			if(loopControl++ >= 2000000){ table.clear(); return table;  }
+			loopControl = 0;
 			vector<string> singleRecord;
 			for(int i = 0; i < numberOfFields; i++){
+				if(loopControl++ >= 2000000){ table.clear(); return table;  }
 				string singleField = "";
 				while(rawString[mainIndex] != '\n'){
+					if(loopControl++ >= 2000000){ table.clear(); return table;  }
 					singleField += rawString[mainIndex++];
 				}
 				singleRecord.push_back(singleField);
@@ -128,6 +124,8 @@ public:
 	EthioTreeNode* ParseEthioFormatT(std::string rawEthioFormat) {
     	// Step 1: Parse the raw string into a table
 	    std::vector<std::vector<std::string>> table = ParseRawString(rawEthioFormat, 2);
+            // A size of 0 of the table indicates an error or empty
+	    if(table.size() == 0){ return NULL);
 	    std::vector<std::string> firstKVP = table[0];  // First vector is the building map
 	    string buildingMap = firstKVP[0];
 	    int tableIndex = 1;  // Start from 1 since index 0 is the building map
@@ -213,9 +211,13 @@ int main(){
   	
    	*/
 	EthioTreeNode* etn = ef.ParseEthioFormatT( "1220121222012012200122120122\n\nk1\nv1\nk2\nv2\nk3\nv3\nk4\nv4\nk5\nv5\nk6\nv6\nk7\nv7\nk8\nv8\nk9\nv9\nk10\nv10\nk11\nv11\nk12\nv12\nk13\nv13\nk14\nv14\n\0");
-	ef.TraverseEthioTree(etn, PrintKVPs);
-	string serializedEthioFormat = ef.SerializeEthioFormat(etn);
-	cout << serializedEthioFormat;
-	ef.CleanUpEthioTree(etn);
+	if(!etn){
+		cout << "Invalid or empty content" << endl;
+	} else{
+		ef.TraverseEthioTree(etn, PrintKVPs);
+		string serializedEthioFormat = ef.SerializeEthioFormat(etn);
+		cout << serializedEthioFormat;
+		ef.CleanUpEthioTree(etn);
+	}
 	return 0;
 }
