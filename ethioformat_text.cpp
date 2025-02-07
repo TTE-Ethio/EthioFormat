@@ -191,6 +191,27 @@ void PrintKVPs(vector<string>& keys, vector<string>& values, int depth, int whic
 }
 int main(){
 	EthioFormat ef;
+	/*
+			Node-1
+   		        /|\
+	     	       / | \
+	      	      /  |  \
+	             /   |   \
+	            /    |    \
+	           /     |     \
+	      Node-2  Node-3   Node-7 (k10->v10
+	     (k1->v1  (k3->v3)  |\     k11->k11)
+             k2->v2)   /|\      | \
+		      / | \     |   \
+		    /   |  \   Node-8 \ 
+      		   /    |    \(k12->v12)\
+	         /	|     \           \
+	       Node-4  Node-5   Node-6     Node-9
+ 	      (k4->v4  (k7->v7) (k8->v8	   (k13->v13
+              k5->k5		k9->k9)     k14->v14)
+              k6->k6)
+  	
+   	*/
 	EthioTreeNode* etn = ef.ParseEthioFormatT( "1220121222012012200122120122\n\nk1\nv1\nk2\nv2\nk3\nv3\nk4\nv4\nk5\nv5\nk6\nv6\nk7\nv7\nk8\nv8\nk9\nv9\nk10\nv10\nk11\nv11\nk12\nv12\nk13\nv13\nk14\nv14\n\0");
 	ef.TraverseEthioTree(etn, PrintKVPs);
 	ef.CleanUpEthioTree(etn);
