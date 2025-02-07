@@ -174,7 +174,7 @@ public:
 		}
 	}
 	void CleanUpEthioTree(EthioTreeNode* rootNode){
-		TraverseEthioTreeForPointerCollection(etn);
+		TraverseEthioTreeForPointerCollection(rootNode);
 		for(int i = 0; i < tempEtnPointers.size(); i++){
 			delete tempEtnPointers[i];
 		}
