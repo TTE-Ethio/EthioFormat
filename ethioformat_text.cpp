@@ -181,3 +181,17 @@ public:
 		tempEtnPointers.clear();
 	}
 };
+
+void PrintKVPs(vector<string>& keys, vector<string>& values, int depth, int whichChild){
+	cout << "Depth: " << depth << " Which Child: " << whichChild << endl;
+	for(int i = 0; i < keys.size(); i++){
+		cout << keys[i] << " : " << values[i] << endl;
+	}
+	cout << endl;
+}
+int main(){
+	EthioFormat ef;
+	EthioTreeNode* etn = ef.ParseEthioFormatT( "1220121222012012200122120122\n\nk1\nv1\nk2\nv2\nk3\nv3\nk4\nv4\nk5\nv5\nk6\nv6\nk7\nv7\nk8\nv8\nk9\nv9\nk10\nv10\nk11\nv11\nk12\nv12\nk13\nv13\nk14\nv14\n\0");
+	ef.TraverseEthioTree(etn, PrintKVPs);
+	ef.CleanUpEthioTree(etn);
+}
