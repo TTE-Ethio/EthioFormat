@@ -50,10 +50,10 @@ The core of **EthioFormat** lies in its ability to store complex, hierarchical d
 2. **The Header**  
    The header in EthioFormat is a concise representation of the data structure, using a simple encoding system of **0s**, **1s**, and **2s**. Here’s how it works:
    - **1** signals the creation of a new **node** or **depth level** in the hierarchy (like adding a new level to a tree).
-   - **2** signals the addition of a **new attribute**—a key-value pair.
+   - **2** signals the addition of a **new attribute**—a key-value pair to the current node that is pointed to.
    - **0** signals **backtracking**, returning to a **previous node** in the tree, so subsequent nodes can be added as **children** of the correct parent.
 
-   This structure allows the header to **describe the tree's shape**, without including the actual data.
+   This structure allows the header to **describe the tree's structure** and **the key-value pairs expectation of each node**, without including the actual data.
 
 3. **The Content**  
    The content of the data (the actual **key-value pairs**) is stored **separately** from the structure, making it very efficient for parsing and accessing data. A pointer is used to **reference each key-value pair**, and when parsing begins, the system moves from one pair to the next based on the instructions in the header. As the parser encounters a **2** in the header, it moves to the next key-value pair and continues the process.
