@@ -58,6 +58,8 @@ The core of **EthioFormat** lies in its ability to store complex, hierarchical d
 3. **The Content**  
    The content of the data (the actual **key-value pairs**) is stored **separately** from the structure, making it very efficient for parsing and accessing data. A pointer is used to **reference each key-value pair**, and when parsing begins, the system moves from one pair to the next based on the instructions in the header. As the parser encounters a **2** in the header, it moves to the next key-value pair and continues the process.
 
+The extension of a text-version of EthioFormat is .eft and the extension of a binary-version of EthioFormat is .efb
+
 ---
 
 #### **Why EthioFormat Matters**
@@ -194,7 +196,16 @@ Now, for the rest of the key-value pairs, they can be used to fill in the node's
 
 ![My Image](EthioFormat_demonstration.png)
 
-Now, as you can see in the picture above, the arrow shows how the tree is constructed and the node that the arrow points to also shows attributes (key-value pairs). Also, you can also see the steps incrementing as it builds the tree, in the bracket, alongside the map number. For instance, As it moves from the root node to the first child, we see 1(1), which means the first step is creating the first child. After that, we can see: 2(2) and 2(3). This means the second and third step assign key-value pairs as attributes. It continues using the tree building map we discussed, in this case it is: 1220121222012012200122120122. So as it just found two 2s, it extracts two key-value pairs, which in this case are k1/v1 and k2/v2. And then the fourth map number is 0, which in this case makes it backtrack to the root node, in this case the parent node of the first child. Since it has red 2 attributes, 
+
+Now, as you can see in the picture above, the arrow shows how the tree is constructed and the node that the arrow points to also shows attributes (key-value pairs). Also, you can also see the steps incrementing as it builds the tree, in the bracket, alongside the map number. For instance, As it moves from the root node to the first child, we see 1(1), which means the first step is creating the first child. After that, we can see: 2(2) and 2(3). This means the second and third step assign key-value pairs as attributes. It continues using the tree building map we discussed, in this case it is: 1220121222012012200122120122. So as it just found two 2s, it extracts two key-value pairs, which in this case are k1/v1 and k2/v2. And then the fourth map number is 0, which in this case makes it backtrack to the root node, in this case the parent node of the first child. Since it has red 2 attributes, it will start reading from the 3rd key-value pairs when it encounters a 2. 
+
+Now, the tree above has been implemented in the ethioformat_text.cpp file.
+
+
+Now, this is the beginning, here are what are remaining to complete this:
+- Binary version
+- Handling in parallel
+- Dynamically adjusting length for serialization
 ---
 
 ### **Bringing It All Together: What EthioFormat Does Well**
