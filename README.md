@@ -192,7 +192,7 @@ The second field in the header is empty for now but will play a crucial role lat
 
 Now, for the rest of the key-value pairs, they can be used to fill in the node's data. Once the header is parsed to get the tree-building map, that map is used to construct the tree with 1 being used to create a new node and go one level deeper making the current node the new child, 2 being used to add a key-value pair to the current node that we are focusing on, and 0 is used to backtrack changing the node we are focusing on to the parent of the current node. Now, let's see a simple example, on how it works:
 
-![My Image](EthioFormat-demonstration.png)
+![My Image](EthioFormat_demonstration.png)
 
 ---
 
