@@ -72,17 +72,25 @@ EthioTreeNode* EthioTreeNode::GetParent() {
 
 class EthioFormatB{
 private:
-	vector<int> 
+	void GetBinaryOfString(string singleFieldText, vector<int>& singleFieldBinary){
+		singeFieldBinary.clear();
+		for(int i = 0; i < singleFieldText.size(); i++){
+			singleFieldBinary.push(int(singleFieldText[i]);
+		}
+	}
+
 	void UtilSerializeEthioFormatMap(EthioTreeNode* rootNode, vector<int>& map){
 		map.push_back(1);
-		for(int i = 0; i < rootNode->GetNumKVPs(); i++){ map .push_back(2); }
+		for(int i = 0; i < rootNode->GetNumKVPs(); i++){ map.push_back(2); }
 		for(int i = 0; i < rootNode->GetNumberOfChildren(); i++){
 			UtilSerializeEthioFormatMap(rootNode->GetChild(i), map);
 		}
 		map.push_back(0);
 	}
-	int GetBinaryOfString(char character){
-
+	void UtilSerializeEthioFormatKVPsSizes(EthioTreeNode* rootNode, vector<int>& sizeOfAllKVPs){
+		for(int i = 0; i < rootNode->GetNumKVPs(); i++){ 
+			
+		}
 	}
 	
 	void UtilSerializeEthioFormatKVPs(EthioTreeNode* rootNode, vector<int>& kvpBinaryNumbers){
@@ -93,7 +101,7 @@ private:
 			UtilSerializeEthioFormatKVPs(rootNode->GetChild(i), kvpString);
 		}
 	}
-
+	
 	void TraverseEthioTreeForPointerCollection(EthioTreeNode* etn){
 		tempEtnPointers.push_back(etn);
 		for(int i = 0; i < etn->GetNumberOfChildren(); i++){
