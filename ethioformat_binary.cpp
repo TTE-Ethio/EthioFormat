@@ -70,40 +70,23 @@ EthioTreeNode* EthioTreeNode::GetParent() {
     return parent;
 }
 
-class EthioFormat{
+class EthioFormatB{
 private:
-	std::vector<std::vector<std::string>> ParseRawString(string rawString, int numberOfFields){
-		vector<std::vector<std::string>> table;
-		int loopControl;
-		for(int mainIndex = 0; rawString[mainIndex] != '\0' ; ){
-			if(loopControl++ >= 2000000){ table.clear(); return table;  }
-			loopControl = 0;
-			vector<string> singleRecord;
-			for(int i = 0; i < numberOfFields; i++){
-				if(loopControl++ >= 2000000){ table.clear(); return table;  }
-				string singleField = "";
-				while(rawString[mainIndex] != '\n'){
-					if(loopControl++ >= 2000000){ table.clear(); return table;  }
-					singleField += rawString[mainIndex++];
-				}
-				singleRecord.push_back(singleField);
-				mainIndex++;
-			}
-			table.push_back(singleRecord);
-		}
-		return table;
-	}
-	void UtilSerializeEthioFormatMap(EthioTreeNode* rootNode, string& map){
-		map += "1";
-		for(int i = 0; i < rootNode->GetNumKVPs(); i++){ map += "2"; }
+	void UtilSerializeEthioFormatMap(EthioTreeNode* rootNode, vector<int>& map){
+		map.push_back(1);
+		for(int i = 0; i < rootNode->GetNumKVPs(); i++){ map .push_back(2); }
 		for(int i = 0; i < rootNode->GetNumberOfChildren(); i++){
 			UtilSerializeEthioFormatMap(rootNode->GetChild(i), map);
 		}
-		map += "0";
+		map.push_back(0);
 	}
-	void UtilSerializeEthioFormatKVPs(EthioTreeNode* rootNode, string& kvpString){
+	int GetBinaryOfCharacter(char character){
+
+	}
+	
+	void UtilSerializeEthioFormatKVPs(EthioTreeNode* rootNode, vector<int>& kvpBinaryNumbers){
 		for(int i = 0; i < rootNode->GetNumKVPs(); i++){
-			kvpString += (rootNode->GetKey(i) + "\n" + rootNode->GetValue(i) + "\n");
+			kvpString += (rootNode->GetKey(i) +  + rootNode->GetValue(i) + "\n");
 		}
 		for(int i = 0; i < rootNode->GetNumberOfChildren(); i++){
 			UtilSerializeEthioFormatKVPs(rootNode->GetChild(i), kvpString);
@@ -210,6 +193,7 @@ int main(){
               k6->k6)
   	
    	*/
+	//Since this is the binary version, we will write the numerical representation alongside the offset
 	EthioTreeNode* etn = ef.ParseEthioFormatT( "1220121222012012200122120122\n\nk1\nv1\nk2\nv2\nk3\nv3\nk4\nv4\nk5\nv5\nk6\nv6\nk7\nv7\nk8\nv8\nk9\nv9\nk10\nv10\nk11\nv11\nk12\nv12\nk13\nv13\nk14\nv14\n\0");
 	if(!etn){
 		cout << "Invalid or empty content" << endl;
