@@ -205,7 +205,7 @@ Now, the tree above has been implemented in the ethioformat_text.cpp file.
 Now, this is the beginning, here are what are remaining to complete this:
 - Text version representation for parallelism
 - Binary version while format is suitable, the parallel access code hasn't been written
-- Dynamically adjusting length for serialization
+- Dynamically adjusting length for serialization / Managing dynamic data structure update and variable-length serialization
 - General optimization in code
 ---
 
