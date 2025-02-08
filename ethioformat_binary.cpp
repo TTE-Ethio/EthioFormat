@@ -72,6 +72,7 @@ EthioTreeNode* EthioTreeNode::GetParent() {
 
 class EthioFormatB{
 private:
+	vector<int> 
 	void UtilSerializeEthioFormatMap(EthioTreeNode* rootNode, vector<int>& map){
 		map.push_back(1);
 		for(int i = 0; i < rootNode->GetNumKVPs(); i++){ map .push_back(2); }
@@ -80,7 +81,7 @@ private:
 		}
 		map.push_back(0);
 	}
-	int GetBinaryOfCharacter(char character){
+	int GetBinaryOfString(char character){
 
 	}
 	
