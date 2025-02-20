@@ -74,7 +74,7 @@ class EthioFormatT{
 private:
 	std::vector<std::vector<std::string>> ParseRawString(string rawString, int numberOfFields){
 		vector<std::vector<std::string>> table;
-		int loopControl;
+		int loopControl = 0;
 		for(int mainIndex = 0; rawString[mainIndex] != '\0' ; ){
 			if(loopControl++ >= 2000000){ table.clear(); return table;  }
 			loopControl = 0;
@@ -125,7 +125,7 @@ public:
     	// Step 1: Parse the raw string into a table
 	    std::vector<std::vector<std::string>> table = ParseRawString(rawEthioFormat, 2);
             // A size of 0 of the table indicates an error or empty
-	    if(table.size() == 0){ return NULL);
+	    if(table.size() == 0){ return NULL; }
 	    std::vector<std::string> firstKVP = table[0];  // First vector is the building map
 	    string buildingMap = firstKVP[0];
 	    int tableIndex = 1;  // Start from 1 since index 0 is the building map
