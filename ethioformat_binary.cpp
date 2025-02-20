@@ -234,68 +234,68 @@ void PrintKVPs(vector<vector<int>>& keys, vector<vector<int>>& values, int depth
 			printf("%c", key[j]);
 		} printf(" ");
 		cout << "Value: ";
-			for (int j = 0; j < value.size(); j++) {
-				printf("%c", value[j]);
-			} printf(" ");
-		}
-		cout << endl;
+		for (int j = 0; j < value.size(); j++) {
+			printf("%c", value[j]);
+		} printf(" ");
 	}
-	int main() {
-		EthioFormatB efb;
-		/*
-						Node-1
-						/|\
-					   / | \
-					  /  |  \
-					 /   |   \
-					/    |    \
-				   /     |     \
-			  Node-2  Node-3   Node-7 (k10->v10
-			 (k1->v1  (kZ3->v3)  |\     k11->k11)
-			 k2->v2)   /|\      | \
-			     	  / | \     |   \
-					/   |  \  Node-8 \
-				   /    |   \(k12->v12)\
-				  /	    |     \         \
-			Node-4  Node-5 Node-6     Node-9
-			 (k4->v4  (k7->v7) (k8->v8)	 (k13->v13
-			  k5->k5           k9->k9)	  k14->v14)
-			  k6->k6)
+	cout << endl;
+}
+int main() {
+	EthioFormatB efb;
+/*
+				Node-1
+				/|\
+			       / | \
+			      /  |  \
+			     /   |   \
+			    /    |    \
+		           /     |     \
+	 	       Node-2  Node-3   Node-7 (k10->v10
+	             (k1->v1  (kZ3->v3)  |\     k11->k11)
+	              k2->v2)   /|\      | \
+	     	  	       / | \     |   \
+			     /   |  \  Node-8 \
+		  	    /    |   \(k12->v12)\
+		 	  /	 |     \         \
+		       Node-4  Node-5 Node-6    Node-9
+		      (k4->v4  (k7->v7) (k8->v8)(k13->v13
+	  	       k5->k5   k9->k9)	  	k14->v14)
+	  	      k6->k6)
 
-		*/
+*/
 
 
-		// 1220121222012012200122120122\n\nk1\nv1\nk2\nv2\nk3\nv3\nk4\nv4\nk5\nv5\nk6\nv6\nk7\nv7\nk8\nv8\nk9\nv9\nk10\nv10\nk11\nv11\nk12\nv12\nk13\nv13\nk14\nv14\n\0
-		string map = "12201212220120122001221201223";
-		vector<int> binaryVersion;
-		for (int i = 0; i < map.size(); i++) {
-			binaryVersion.push_back(int(map[i]));
-		}
-		vector<int> sizes = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 };
-		for (int i = 0; i < sizes.size(); i++) {
-			binaryVersion.push_back(sizes[i]);
-		}
-		vector<string> actualContents = { "k1", "v1", "k2", "v2", "k3", "v3", "k4", "v4", "k5", "v5", "k6", "v6", "k7", "v7", "k8", "v8", "k9", "v9", "k10", "v10", "k11", "v11", "k12", "v12", "k13", "v13", "k14", "v14" };
-		for (int i = 0; i < actualContents.size(); i++) {
-			for (int j = 0; j < actualContents[i].size(); j++) {
-				binaryVersion.push_back(int(actualContents[i][j]));
-			}
-		}
-		EthioTreeNodeB* etn = efb.ParseEthioFormatB(binaryVersion);
-
-		for (int i = 0; i < actualContents.size(); i++) {
-			for (int j = 0; j < actualContents[i].size(); j++) {
-				binaryVersion.push_back(int(actualContents[i][j]));
-			}
-		}
-
-		if (!etn) {
-			cout << "Invalid or empty content" << endl;
-		}
-		else {
-			efb.TraverseEthioTree(etn, PrintKVPs);
-			// Serialize
-			efb.CleanUpEthioTree(etn);
-		}
-		return 0;
+	// 1220121222012012200122120122\n\nk1\nv1\nk2\nv2\nk3\nv3\nk4\nv4\nk5\nv5\nk6\nv6\nk7\nv7\nk8\nv8\nk9\nv9\nk10\nv10\nk11\nv11\nk12\nv12\nk13\nv13\nk14\nv14\n\0
+	string map = "12201212220120122001221201223";
+	vector<int> binaryVersion;
+	for (int i = 0; i < map.size(); i++) {
+		binaryVersion.push_back(int(map[i]));
 	}
+	vector<int> sizes = { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3 };
+	for (int i = 0; i < sizes.size(); i++) {
+		binaryVersion.push_back(sizes[i]);
+	}
+	vector<string> actualContents = { "k1", "v1", "k2", "v2", "k3", "v3", "k4", "v4", "k5", "v5", "k6", "v6", "k7", "v7", "k8", "v8", "k9", "v9", "k10", "v10", "k11", "v11", "k12", "v12", "k13", "v13", "k14", "v14" };
+	for (int i = 0; i < actualContents.size(); i++) {
+		for (int j = 0; j < actualContents[i].size(); j++) {
+			binaryVersion.push_back(int(actualContents[i][j]));
+		}
+	}
+	EthioTreeNodeB* etn = efb.ParseEthioFormatB(binaryVersion);
+	
+	for (int i = 0; i < actualContents.size(); i++) {
+		for (int j = 0; j < actualContents[i].size(); j++) {
+			binaryVersion.push_back(int(actualContents[i][j]));
+		}
+	}
+	
+	if (!etn) {
+		cout << "Invalid or empty content" << endl;
+	}
+	else {
+		efb.TraverseEthioTree(etn, PrintKVPs);
+		// Serialize
+		efb.CleanUpEthioTree(etn);
+	}
+	return 0;		
+}
