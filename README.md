@@ -31,7 +31,7 @@ I truly hope you find this documentation engaging and informative. To keep thing
 ---
 
 
-## 2. Serialization & File Formats 📁
+# 2. Serialization & File Formats 📁
 
 ### **What is Serialization?**  
 Serialization is the process of **turning data into a linear format** so it can be easily stored or transferred. 🧳  
@@ -91,7 +91,7 @@ Here’s a simple, engaging write-up for **EthioFormat** so far, based on your i
 
 
 
-## 3. EthioFormat: A New Way to Serialize Data 🧩
+# 3. EthioFormat: A New Way to Serialize Data 🧩
 
 ### **What is EthioFormat?**  
 EthioFormat is a **new data serialization format** that completely separates the **structure** of the data from the **content** itself. 🎉  
@@ -161,7 +161,7 @@ This approach offers **huge advantages** for both speed and simplicity:
 
 
 
-### 4. The Birth of EthioFormat: A Journey of Simplicity and Innovation ✨
+# 4. The Birth of EthioFormat: A Journey of Simplicity and Innovation ✨
 
 The journey to create **EthioFormat** was born out of necessity and curiosity during the development of two web applications. At the time, I was already working with JavaScript client functions like `XMLHttpRequest` and the equivalent in PHP to send data between the server and browser 🌐. However, I didn't have the time or bandwidth to explore existing serialization formats like JSON or XML 🤔. I was facing a demanding project with little space to learn something new, so I had to figure out a solution that could work within my constraints ⚙️.
 
@@ -200,7 +200,7 @@ Ultimately, **EthioFormat** was created by thinking about complex problems in si
 
 
 
-## 5. EthioFormat: Text & Binary Versions 🚀  
+# 5. EthioFormat: Text & Binary Versions 🚀  
 
 EthioFormat started as a **text-based format** 📜✨. But after that, I created a **binary version** 💾, which works similarly but with some differences.  
 
@@ -647,7 +647,7 @@ Here's how the binary version works:
 
 
 
-# **🚀 6. Comparison to Other Formats**  
+# 🚀 6. Comparison to Other Formats
 
 Now that we've explored **EthioFormat**—its structure, how it works, how it stores data, and how to implement it—let's see how it compares to the **big players** in data serialization:  
 
@@ -879,7 +879,7 @@ EthioFormat’s **binary version** takes a **different approach**:
 
 
 
-# **🚀 8. Parallelism & Dynamic Update in EthioFormat**  
+# 🚀 8. Parallelism & Dynamic Update in EthioFormat
 
 Before we discuss EthioFormat’s **limitations**, let’s first explore how it supports **parallelism** 🏎️💨 and **dynamic updates** 🔄.  
 
@@ -960,7 +960,7 @@ One of the **challenges of offset-based storage** is **stability**—because **i
 
 
 
-# **⚖️ 9. Limitations of EthioFormat**  
+# ⚖️ 9. Limitations of EthioFormat
 
 Like every tool and invention, **EthioFormat has its trade-offs**. While it brings **efficiency, parallelism, and fast access**, there are also **challenges** that come with its design. Let’s take a look 👀.  
 
@@ -1051,7 +1051,7 @@ This **extra validation step** can **catch errors early** before they break ever
 
 
 
-# **🚀 9. Potential Applications of EthioFormat**  
+# 🚀 9. Potential Applications of EthioFormat
 
 Now that we've seen how **EthioFormat efficiently stores data and supports parallelism**, let's explore **where it can truly shine**! 🌟  
 
@@ -1145,7 +1145,7 @@ We’re only scratching the surface! **As EthioFormat evolves**, we can expect:
 
 
 
-# **🚀 10. The Future of EthioFormat**  
+# 🚀 10. The Future of EthioFormat  
 
 Now we are getting close to the end of this documentation, and it's time to discuss **the future plans for EthioFormat**.  
 
@@ -1255,7 +1255,7 @@ While EthioFormat is already a **powerful, innovative format**, its **best days 
 
 🌍 **From APIs to AI, gaming to big data, EthioFormat is built for the future!**
 
-# **🌍 11. Why I Named It EthioFormat**  
+# 🌍 11. Why I Named It EthioFormat
 
 Naming a creation is always **a significant decision**. EthioFormat is more than just a **data serialization format**—it's a **symbol** of something **bigger**.  
 
@@ -1326,7 +1326,7 @@ Certainly! Here's the conclusion with a similar tone and style, including emojis
 
 ---
 
-## 12. Conclusion: Thank You for Exploring EthioFormat! 🙏
+# 12. Conclusion: Thank You for Exploring EthioFormat! 🙏
 
 I hope this documentation has given you a thorough understanding of EthioFormat, its potential, and its vision. 🌟 From the innovative serialization structure to the dynamic updates, parallelism, and beyond, EthioFormat is designed to change the way we think about data storage and processing. 💾💡
 
