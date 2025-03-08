@@ -28,7 +28,7 @@ In addition, I will share the vision behind the name “EthioFormat” and what 
 
 I truly hope you find this documentation engaging and informative. To keep things fun and easy to follow, I’ve used simple language, shorter paragraphs, and even a bit of emoji magic to keep things lively! 😊
 
-[🔝 Back to Table of Contents](#table-of-contents)
+[🔝 Back to Table of Contents](#table-of-contents-)
 
 ---
 
@@ -81,7 +81,7 @@ Understanding how data is serialized and stored in different formats helps you c
 
 By knowing these formats, you can make better choices when storing and transferring your data. 📈
 
-[🔝 Back to Table of Contents](#table-of-contents)
+[🔝 Back to Table of Contents](#table-of-contents-)
 
 ---
 
@@ -153,7 +153,7 @@ This approach offers **huge advantages** for both speed and simplicity:
 4. **Easy Parallel Processing**: Since nodes and key-value pairs are handled independently, it’s easy to **split tasks across multiple processors** or threads. 🧠  
 5. **Better Memory Usage**: No need to store extra metadata or structure info during parsing. Everything is lean and efficient. 🧳  
 
-
+[🔝 Back to Table of Contents](#table-of-contents-)
 ---
 
 
