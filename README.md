@@ -879,7 +879,7 @@ EthioFormat’s **binary version** takes a **different approach**:
 
 
 
-# 🚀 8. Parallelism & Dynamic Update in EthioFormat
+# 🚀 7. Parallelism & Dynamic Update in EthioFormat
 
 Before we discuss EthioFormat’s **limitations**, let’s first explore how it supports **parallelism** 🏎️💨 and **dynamic updates** 🔄.  
 
@@ -960,7 +960,7 @@ One of the **challenges of offset-based storage** is **stability**—because **i
 
 
 
-# ⚖️ 9. Limitations of EthioFormat
+# ⚖️ 8. Limitations of EthioFormat
 
 Like every tool and invention, **EthioFormat has its trade-offs**. While it brings **efficiency, parallelism, and fast access**, there are also **challenges** that come with its design. Let’s take a look 👀.  
 
