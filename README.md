@@ -1,12 +1,12 @@
 # EthioFormat Documentation 🚀
 
 ## Table of Contents 📌
-- [🌍 1. Introduction](#-1-introduction)
-- [What is EthioFormat? 🔍](#2-serialization--file-formats-)
-- [How I Came Up with EthioFormat 💡](#3-ethioformat-a-new-way-to-serialize-data-)
-- [The Text Version of EthioFormat 📄](#the-text-version-of-ethioformat-)
-- [The Binary Version of EthioFormat 🔢](#the-binary-version-of-ethioformat-)
-- [Comparison with XML, JSON, and Protocol Buffers ⚖️](#comparison-with-xml-json-and-protocol-buffers-)
+- [ 1.🌍 Introduction](#-1-introduction)
+- [2. 📁 Serialization & File Formats ](#2-serialization--file-formats-)
+- [3. 🧩 EthioFormat: A New Way to Serialize Data](#3-ethioformat-a-new-way-to-serialize-data-)
+- [4. ✨ The Birth of EthioFormat: A Journey of Simplicity and Innovation](#the-text-version-of-ethioformat-)
+- [5. 🚀 EthioFormat: Text & Binary Versions](#the-binary-version-of-ethioformat-)
+- [6. 🚀 Comparison to Other Formats](#comparison-with-xml-json-and-protocol-buffers-)
 - [Parallelism & Dynamic Updates ⚡](#parallelism--dynamic-updates-)
 - [Limitations of EthioFormat 🚧](#limitations-of-ethioformat-)
 - [Potential Applications 🌍](#potential-applications-)
