@@ -191,8 +191,9 @@ While I haven’t yet conducted benchmarks, I know from experience that **EthioF
 
 Ultimately, **EthioFormat** was created by thinking about complex problems in simple ways 🌟. By breaking down the process of tree traversal into digestible chunks, I was able to create a format that combines the best of both worlds: the simplicity of a flat structure with the power and flexibility of hierarchical data 💪.
 
+[🔝 Back to Table of Contents](#table-of-contents-)
 
-
+---
 
 
 
@@ -217,7 +218,7 @@ Here’s how they are categorized:
 
 Now that we have both versions, let’s **explore them one by one**! 🚀
 
-
+[🔝 Back to Table of Contents](#table-of-contents-)
 
 
 
@@ -610,6 +611,9 @@ Got it! Now, let’s break it down into **steps for implementing the binary vers
 
 ---
 
+[🔝 Back to Table of Contents](#table-of-contents-)
+
+
 ### ** 🛠 5.2 The Binary Version **
 Here's how the binary version works:
 
@@ -637,7 +641,7 @@ Here's how the binary version works:
 ✅ **Direct Parsing** → More efficient memory usage.  
 
 
-
+[🔝 Back to Table of Contents](#table-of-contents-)
 
 
 
@@ -873,7 +877,8 @@ EthioFormat’s **binary version** takes a **different approach**:
 
 ✅ **Binary EthioFormat** competes with **Protocol Buffers** by being **self-contained**, **efficient**, and **allowing direct access**.  
 
-
+[🔝 Back to Table of Contents](#table-of-contents-)
+---
 
 
 
@@ -951,8 +956,9 @@ One of the **challenges of offset-based storage** is **stability**—because **i
 
 ✅ **Dynamic Updates**: By **tracking size changes** and **updating the map accordingly**, EthioFormat maintains **stability while keeping its speed advantages**.  
 
+[🔝 Back to Table of Contents](#table-of-contents-)
 
-
+---
 
 
 
@@ -1044,6 +1050,8 @@ This **extra validation step** can **catch errors early** before they break ever
 ✅ **Enhance integrity checks** to prevent corruption.  
 ✅ **Optimize updates** so modifying structure is easier.  
 ✅ **Push for native browser support** to unleash full performance.  
+
+[🔝 Back to Table of Contents](#table-of-contents-)
 
 ---
 
@@ -1140,6 +1148,8 @@ We’re only scratching the surface! **As EthioFormat evolves**, we can expect:
 ✅ **More tools for easy visualization & editing**.  
 ✅ **Adoption in AI, gaming, big data, and web APIs**.  
 ✅ **Increased energy efficiency in large-scale computing**.  
+
+[🔝 Back to Table of Contents](#table-of-contents-)
 
 🚀 **From APIs to gaming, AI to big data, EthioFormat is built for the future and 4th industrial revolution!**
 
@@ -1255,6 +1265,10 @@ While EthioFormat is already a **powerful, innovative format**, its **best days 
 
 🌍 **From APIs to AI, gaming to big data, EthioFormat is built for the future!**
 
+[🔝 Back to Table of Contents](#table-of-contents-)
+
+---
+
 # 🌍 11. Why I Named It EthioFormat
 
 Naming a creation is always **a significant decision**. EthioFormat is more than just a **data serialization format**—it's a **symbol** of something **bigger**.  
@@ -1322,6 +1336,8 @@ It is **a contribution**.
 
 🌍 From **Ethiopia** to **the world**, EthioFormat represents **innovation, resilience, and the belief that new ideas can come from anywhere**. 🚀
 
+[🔝 Back to Table of Contents](#table-of-contents-)
+---
 
 # 12. Conclusion: Thank You for Exploring EthioFormat! 🙏
 
@@ -1334,5 +1350,8 @@ The journey of EthioFormat is just beginning, and as I continue to improve and e
 Thank you for taking the time to read through this documentation. I hope you found it informative, engaging, and inspiring. 😊 If you’re as excited about EthioFormat as I am, stay tuned for more updates, developments, and future releases! 🔥
 
 Let’s build a better, brighter future, one byte at a time. 💻✨
+
+[🔝 Back to Table of Contents](#table-of-contents-)
+---
 
 Tewodros Tech-Ethiopia
