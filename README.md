@@ -1,4 +1,4 @@
-# EthioFormat Documentation 🚀
+# EthioFormat Documentation 🇪🇹
 
 ## Table of Contents 📌
 - ### [ 1.🌍 Introduction](#-1-introduction)
