@@ -1,7 +1,7 @@
 # EthioFormat Documentation 🚀
 
 ## Table of Contents 📌
-- [🌍 1. Introduction](#introduction-)
+- [🌍 1. Introduction](#introduction)
 - [What is EthioFormat? 🔍](#what-is-ethioformat-)
 - [How I Came Up with EthioFormat 💡](#how-i-came-up-with-ethioformat-)
 - [The Text Version of EthioFormat 📄](#the-text-version-of-ethioformat-)
@@ -610,7 +610,7 @@ Got it! Now, let’s break it down into **steps for implementing the binary vers
 
 ---
 
-### **🛠 5.2 The Binary Version **
+### ** 🛠 5.2 The Binary Version **
 Here's how the binary version works:
 
 1. **Read the Binary Map**  
