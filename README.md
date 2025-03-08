@@ -1,4 +1,4 @@
-# **🌍 1. Introduction **  
+# 🌍 1. Introduction
 **Welcome to the Documentation of EthioFormat!** 🎉
 
 EthioFormat is a groundbreaking data serialization and deserialization format designed to revolutionize how we store and process data. 🚀 The goal is to make data handling efficient, simple, and concise while tackling the complex problems associated with traditional formats. 💾
@@ -1309,7 +1309,7 @@ Certainly! Here's the conclusion with a similar tone and style, including emojis
 
 ---
 
-** 12. Conclusion: Thank You for Exploring EthioFormat! 🙏**
+# ** 12. Conclusion: Thank You for Exploring EthioFormat! 🙏**
 
 I hope this documentation has given you a thorough understanding of EthioFormat, its potential, and its vision. 🌟 From the innovative serialization structure to the dynamic updates, parallelism, and beyond, EthioFormat is designed to change the way we think about data storage and processing. 💾💡
 
@@ -1321,6 +1321,4 @@ Thank you for taking the time to read through this documentation. I hope you fou
 
 Let’s build a better, brighter future, one byte at a time. 💻✨
 
----
-
-How does that sound?
+Tewodros Tech-Ethiopia
