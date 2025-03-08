@@ -7,12 +7,12 @@
 - [4. ✨ The Birth of EthioFormat: A Journey of Simplicity and Innovation](#the-text-version-of-ethioformat-)
 - [5. 🚀 EthioFormat: Text & Binary Versions](#the-binary-version-of-ethioformat-)
 - [6. 🚀 Comparison to Other Formats](#comparison-with-xml-json-and-protocol-buffers-)
-- [Parallelism & Dynamic Updates ⚡](#parallelism--dynamic-updates-)
-- [Limitations of EthioFormat 🚧](#limitations-of-ethioformat-)
-- [Potential Applications 🌍](#potential-applications-)
-- [Future Plans 🛠️](#future-plans-)
-- [Why the Name "EthioFormat"? 🇪🇹](#why-the-name-ethioformat-)
-- [Conclusion 🎯](#conclusion-)
+- [7. 🚀 Parallelism & Dynamic Updates ⚡](#parallelism--dynamic-updates-)
+- [8. ⚖️ Limitations of EthioFormat](#limitations-of-ethioformat-)
+- [9. 🌍 Potential Applications of EthioFormat](#potential-applications-)
+- [10.🛠️ The Future of EthioFormat](#future-plans-)
+- [11.🇪🇹  Why I Named It EthioFormat](#why-the-name-ethioformat-)
+- [12.🙏 Conclusion](#conclusion-)
 
 
 # 🌍 1. Introduction
