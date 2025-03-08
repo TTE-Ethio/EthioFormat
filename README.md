@@ -1,7 +1,7 @@
 # EthioFormat Documentation 🚀
 
 ## Table of Contents 📌
-- [Introduction ✨](#introduction-)
+- [🌍 1. Introduction](#introduction-)
 - [What is EthioFormat? 🔍](#what-is-ethioformat-)
 - [How I Came Up with EthioFormat 💡](#how-i-came-up-with-ethioformat-)
 - [The Text Version of EthioFormat 📄](#the-text-version-of-ethioformat-)
