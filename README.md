@@ -779,7 +779,7 @@ Then, when serialized, the data is stored in a **compact binary format** instead
 - **Human-readable like JSON**  
 - **Fast & structured** like both  
 
-# **🚀 Comparing EthioFormat with JSON, XML, and Protocol Buffers**  
+**🚀 Comparing EthioFormat with JSON, XML, and Protocol Buffers**  
 
 Now, let’s **break it down** and see how EthioFormat **stacks up** against the **three giants**:  
 
@@ -862,7 +862,7 @@ EthioFormat’s **binary version** takes a **different approach**:
 
 
 
-# **🚀 7. Parallelism & Dynamic Update in EthioFormat**  
+# **🚀 8. Parallelism & Dynamic Update in EthioFormat**  
 
 Before we discuss EthioFormat’s **limitations**, let’s first explore how it supports **parallelism** 🏎️💨 and **dynamic updates** 🔄.  
 
@@ -943,13 +943,13 @@ One of the **challenges of offset-based storage** is **stability**—because **i
 
 
 
-# **⚖️ 8. Limitations of EthioFormat**  
+# **⚖️ 9. Limitations of EthioFormat**  
 
 Like every tool and invention, **EthioFormat has its trade-offs**. While it brings **efficiency, parallelism, and fast access**, there are also **challenges** that come with its design. Let’s take a look 👀.  
 
 ---
 
-## **📜 1. Less Human Readability (Text Version) 📜**  
+## **📜 A. Less Human Readability (Text Version) 📜**  
 
 Unlike **JSON** and **XML**, where you can clearly see both **structure** and **content**, EthioFormat’s **text version** is:  
 ❌ **Not easily readable** for humans.  
@@ -971,7 +971,7 @@ We could **develop a tool** 🛠️ that:
 
 ---
 
-## **🛑 2. Data Integrity Challenges 🛑**  
+## **🛑 B. Data Integrity Challenges 🛑**  
 
 ### **Text Version: Missing Delimiters Issue**  
 Since EthioFormat relies on `\n` and `\0`, any mistake like:  
@@ -1004,7 +1004,7 @@ This **extra validation step** can **catch errors early** before they break ever
 
 ---
 
-## **🌐 3. Browser Performance Challenges 🌐**  
+## **🌐 C. Browser Performance Challenges 🌐**  
 
 🚀 EthioFormat is **designed for high performance**, but **in web browsers**, its **full speed might not be visible yet**.  
 
@@ -1040,7 +1040,7 @@ Now that we've seen how **EthioFormat efficiently stores data and supports paral
 
 ---
 
-## **🌐 1. General-Purpose API Data Exchange (Web, Mobile, RESTful APIs) 🌐**  
+## **🌐 A. General-Purpose API Data Exchange (Web, Mobile, RESTful APIs) 🌐**  
 
 JSON and XML have long dominated **web and app development** for **data exchange between clients and servers**. EthioFormat can be a **powerful alternative**, especially in high-performance APIs:  
 
@@ -1053,7 +1053,7 @@ JSON and XML have long dominated **web and app development** for **data exchange
 
 ---
 
-## **📊 2. Big Data & Distributed Systems 📊**  
+## **📊 B. Big Data & Distributed Systems 📊**  
 
 Big Data systems deal with **terabytes or even petabytes** of structured and semi-structured data. EthioFormat's **map-based approach** offers unique advantages:  
 
@@ -1069,7 +1069,7 @@ Big Data systems deal with **terabytes or even petabytes** of structured and sem
 
 ---
 
-## **🧠 3. Large-Scale AI Training & Deep Learning 🧠**  
+## **🧠 C. Large-Scale AI Training & Deep Learning 🧠**  
 
 AI and deep learning require **massive amounts of structured data** for training models. Most training pipelines today rely on:  
 
@@ -1090,7 +1090,7 @@ AI and deep learning require **massive amounts of structured data** for training
 
 ---
 
-## **🎮 4. AAA Game Development & Open-World Games 🎮**  
+## **🎮 D. AAA Game Development & Open-World Games 🎮**  
 
 🔹 **My personal favorite!** AAA games require **huge worlds**, diverse assets, and real-time data streaming. Most open-world games **struggle with efficient data storage**.  
 
@@ -1106,7 +1106,7 @@ AI and deep learning require **massive amounts of structured data** for training
 
 ---
 
-## **🌱 5. Energy Efficiency & Sustainability 🌱**  
+## **🌱 E. Energy Efficiency & Sustainability 🌱**  
 
 ⚡ **Less Processing Power** → **Reduced CPU overhead**.  
 💾 **Lower Hardware Requirements** → **Smaller storage footprint**.  
@@ -1136,7 +1136,7 @@ While EthioFormat already offers **efficiency, parallelism, and a unique structu
 
 ---
 
-## **📊 1. Benchmarking & Performance Analysis**  
+## **📊 A. Benchmarking & Performance Analysis**  
 
 So far, we've **discussed** how EthioFormat's structure makes it more **efficient** and **faster** than JSON, XML, and Protocol Buffers.  
 
@@ -1151,7 +1151,7 @@ These benchmarks will **quantify EthioFormat’s advantage** over other formats,
 
 ---
 
-## **🛠️ 2. Tools & Ecosystem Development**  
+## **🛠️ B. Tools & Ecosystem Development**  
 
 To **make EthioFormat more accessible**, we need **tools** that simplify its usage. These will include:  
 
@@ -1164,7 +1164,7 @@ To **make EthioFormat more accessible**, we need **tools** that simplify its usa
 
 ---
 
-## **💻 3. Multi-Language Support**  
+## **💻 C. Multi-Language Support**  
 
 Currently, EthioFormat has been implemented **only in C++**, but future plans include **support for other programming languages**:  
 
@@ -1177,7 +1177,7 @@ Expanding to these languages will **increase EthioFormat’s adoption** across v
 
 ---
 
-## **🧵 4. Parallelism Implementation**  
+## **🧵 D. Parallelism Implementation**  
 
 Right now, the current **EthioFormat implementation** is **sequential**. But given its structure, it has the potential to **fully utilize parallel processing**.  
 
@@ -1187,7 +1187,7 @@ Right now, the current **EthioFormat implementation** is **sequential**. But giv
 
 ---
 
-## **🛠️ 5. Advanced Skeleton Building & Dynamic Filling**  
+## **🛠️ E. Advanced Skeleton Building & Dynamic Filling**  
 
 The current EthioFormat implementation **builds the tree while reading the map** and **fills key-value pairs immediately**.  
 
@@ -1202,7 +1202,7 @@ The current EthioFormat implementation **builds the tree while reading the map**
 
 ---
 
-## **⚙️ 6. Error Handling & Code Optimization**  
+## **⚙️ F. Error Handling & Code Optimization**  
 
 Currently, the EthioFormat code **does not check for errors or handle edge cases properly**.  
 
@@ -1216,7 +1216,7 @@ These updates will **make EthioFormat production-ready** for large-scale applica
 
 ---
 
-## **🚀 7. Wider Adoption & Community Growth**  
+## **🚀 G. Wider Adoption & Community Growth**  
 
 EthioFormat’s **GitHub release is still less than 2 months old**. Right now, it's still **new and not widely adopted**.  
 
