@@ -1,18 +1,18 @@
 # EthioFormat Documentation 🚀
 
 ## Table of Contents 📌
-- [ 1.🌍 Introduction](#-1-introduction)
-- [2. 📁 Serialization & File Formats ](#2-serialization--file-formats-)
-- [3. 🧩 EthioFormat: A New Way to Serialize Data](#3-ethioformat-a-new-way-to-serialize-data-)
-- [4. ✨ The Birth of EthioFormat: A Journey of Simplicity and Innovation](#4-the-birth-of-ethioformat-a-journey-of-simplicity-and-innovation-)
-- [5. 🚀 EthioFormat: Text & Binary Versions](#5-ethioformat-text--binary-versions-)
-- [6. 🚀 Comparison to Other Formats](#-6-comparison-to-other-formats)
-- [7. 🚀 Parallelism & Dynamic Updates ⚡](#-7-parallelism--dynamic-update-in-ethioformat)
-- [8. ⚖️ Limitations of EthioFormat](#%EF%B8%8F-8-limitations-of-ethioformat)
-- [9. 🌍 Potential Applications of EthioFormat](#-9-potential-applications-of-ethioformat)
-- [10.🛠️ The Future of EthioFormat](#-10-the-future-of-ethioformat)
-- [11.🇪🇹  Why I Named It EthioFormat](#-11-why-i-named-it-ethioformat)
-- [12.🙏 Conclusion](#12-conclusion-thank-you-for-exploring-ethioformat-)
+- ### [ 1.🌍 Introduction](#-1-introduction)
+- ### [2. 📁 Serialization & File Formats ](#2-serialization--file-formats-)
+- ### [3. 🧩 EthioFormat: A New Way to Serialize Data](#3-ethioformat-a-new-way-to-serialize-data-)
+- ### [4. ✨ The Birth of EthioFormat: A Journey of Simplicity and Innovation](#4-the-birth-of-ethioformat-a-journey-of-simplicity-and-innovation-)
+- ### [5. 🚀 EthioFormat: Text & Binary Versions](#5-ethioformat-text--binary-versions-)
+- ### [6. 🚀 Comparison to Other Formats](#-6-comparison-to-other-formats)
+- ### [7. 🚀 Parallelism & Dynamic Updates ⚡](#-7-parallelism--dynamic-update-in-ethioformat)
+- ### [8. ⚖️ Limitations of EthioFormat](#%EF%B8%8F-8-limitations-of-ethioformat)
+- ### [9. 🌍 Potential Applications of EthioFormat](#-9-potential-applications-of-ethioformat)
+- ### [10.🛠️ The Future of EthioFormat](#-10-the-future-of-ethioformat)
+- ### [11.🇪🇹  Why I Named It EthioFormat](#-11-why-i-named-it-ethioformat)
+- ### [12.🙏 Conclusion](#12-conclusion-thank-you-for-exploring-ethioformat-)
 
 
 # 🌍 1. Introduction
