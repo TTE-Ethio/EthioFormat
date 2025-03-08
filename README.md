@@ -28,6 +28,8 @@ In addition, I will share the vision behind the name “EthioFormat” and what 
 
 I truly hope you find this documentation engaging and informative. To keep things fun and easy to follow, I’ve used simple language, shorter paragraphs, and even a bit of emoji magic to keep things lively! 😊
 
+[🔝 Back to Table of Contents](#table-of-contents)
+
 ---
 
 
@@ -79,9 +81,7 @@ Understanding how data is serialized and stored in different formats helps you c
 
 By knowing these formats, you can make better choices when storing and transferring your data. 📈
 
-
-
-Here’s a simple, engaging write-up for **EthioFormat** so far, based on your instructions:
+[🔝 Back to Table of Contents](#table-of-contents)
 
 ---
 
