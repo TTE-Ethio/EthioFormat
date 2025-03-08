@@ -1,3 +1,20 @@
+# EthioFormat Documentation 🚀
+
+## Table of Contents 📌
+- [Introduction ✨](#introduction-)
+- [What is EthioFormat? 🔍](#what-is-ethioformat-)
+- [How I Came Up with EthioFormat 💡](#how-i-came-up-with-ethioformat-)
+- [The Text Version of EthioFormat 📄](#the-text-version-of-ethioformat-)
+- [The Binary Version of EthioFormat 🔢](#the-binary-version-of-ethioformat-)
+- [Comparison with XML, JSON, and Protocol Buffers ⚖️](#comparison-with-xml-json-and-protocol-buffers-)
+- [Parallelism & Dynamic Updates ⚡](#parallelism--dynamic-updates-)
+- [Limitations of EthioFormat 🚧](#limitations-of-ethioformat-)
+- [Potential Applications 🌍](#potential-applications-)
+- [Future Plans 🛠️](#future-plans-)
+- [Why the Name "EthioFormat"? 🇪🇹](#why-the-name-ethioformat-)
+- [Conclusion 🎯](#conclusion-)
+
+
 # 🌍 1. Introduction
 **Welcome to the Documentation of EthioFormat!** 🎉
 
