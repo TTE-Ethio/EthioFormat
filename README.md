@@ -6,7 +6,7 @@
 - ### [3. 🧩 EthioFormat: A New Way to Serialize Data](#3-ethioformat-a-new-way-to-serialize-data-)
 - ### [4. ✨ The Birth of EthioFormat: A Journey of Simplicity and Innovation](#4-the-birth-of-ethioformat-a-journey-of-simplicity-and-innovation-)
 - ### [5. 🚀 EthioFormat: Text & Binary Versions](#5-ethioformat-text--binary-versions-)
-   - ### [5.1 🚀 Text Versions](-51-text-version-understanding-delimiters)
+   - ### [5.1 🚀 Text Versions](#-51-text-version-understanding-delimiters)
    - ### [5.2 🚀 Binary Versions](#-52-the-binary-version)
 - ### [6. 🚀 Comparison to Other Formats](#-6-comparison-to-other-formats)
 - ### [7. 🚀 Parallelism & Dynamic Updates ⚡](#-7-parallelism--dynamic-update-in-ethioformat)
