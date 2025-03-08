@@ -183,7 +183,7 @@ Ultimately, **EthioFormat** was created by thinking about complex problems in si
 
 
 
-### 5. EthioFormat: Text & Binary Versions 🚀  
+## 5. EthioFormat: Text & Binary Versions 🚀  
 
 EthioFormat started as a **text-based format** 📜✨. But after that, I created a **binary version** 💾, which works similarly but with some differences.  
 
@@ -221,7 +221,7 @@ For example, take this raw string:
 ```
 Here, we have **4 separate strings**. If we are told that there are **4 items**, we can read **each string until we find a `'\0'`**, and repeat the process **4 times** to extract them.  
 
-#### 🔍 Parsing the List in JavaScript  
+## 🔍 Parsing the List in JavaScript  
 
 The following JavaScript function demonstrates this:  
 
