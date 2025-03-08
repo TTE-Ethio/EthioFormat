@@ -2,8 +2,8 @@
 
 ## Table of Contents 📌
 - [🌍 1. Introduction](#-1-introduction)
-- [What is EthioFormat? 🔍](#what-is-ethioformat-)
-- [How I Came Up with EthioFormat 💡](#how-i-came-up-with-ethioformat-)
+- [What is EthioFormat? 🔍](#2-serialization--file-formats-)
+- [How I Came Up with EthioFormat 💡](#3-ethioformat-a-new-way-to-serialize-data-)
 - [The Text Version of EthioFormat 📄](#the-text-version-of-ethioformat-)
 - [The Binary Version of EthioFormat 🔢](#the-binary-version-of-ethioformat-)
 - [Comparison with XML, JSON, and Protocol Buffers ⚖️](#comparison-with-xml-json-and-protocol-buffers-)
