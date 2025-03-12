@@ -150,7 +150,7 @@ When we start parsing the data, we begin with an **index** that points to the fi
 This approach offers **huge advantages** for both speed and simplicity:  
 
 1. **Faster Parsing**: No need to jump around or make multiple function calls—just keep reading and populating. ⚡  
-2. **Simpler Code**: With only two delimiters to worry about (**1** and **2**), we don’t need extra code for nested contexts or recursion. 💻  
+2. **Simpler Code**: With only two delimiters to worry about ('\n' and '\0'), we don’t need extra code for nested contexts or recursion. 💻  
 3. **Reduced Complexity**: You don’t have to maintain complex structures or multiple contexts. Less stuff to manage = simpler parsing! 🔧  
 4. **Easy Parallel Processing**: Since nodes and key-value pairs are handled independently, it’s easy to **split tasks across multiple processors** or threads. 🧠  
 5. **Better Memory Usage**: No need to store extra metadata or structure info during parsing. Everything is lean and efficient. 🧳  
